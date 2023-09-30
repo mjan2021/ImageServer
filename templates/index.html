@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+</head>
+<body>
+    
+    <div class="image-gallery">
+        <p>Test server that return image for NUTSH</p>
+        {% for image in image_files %}
+            <a href="{{ image }}" alt="image">{{ image}}</a>
+        {% endfor %}
+     <!-- {{ image_files}}    -->
+
+    </div>
+<style>
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image-gallery img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin: 10px;
+    }
+</style>
+</body>
+</html>
